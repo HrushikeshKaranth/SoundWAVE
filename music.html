@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./css/music_style.css"> -->
+    <link rel="stylesheet" href="./css/music_style_768.css">
+    <link rel="icon" href="./images/Logo.png">
+    <script src="https://kit.fontawesome.com/38ce40e06f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="./images/Logo.png" alt="">
+                        <h2>Sound<span class="danger" style="color:#BC3A80 ;"><i>WAVE</i></span></h2>
+                    </a>
+                </div>
+                <div class="upload-wrap">
+                    <form name="form_upload">
+                        <input type="file" id="file-element" accept="audio/mp3" multiple style="display:none;" />
+                        <button type="button" id="btn-upload" class="ctrlsbtn" title="Add Music">Upload Music
+                            Here</button>
+                    </form>
+                </div>
+                <div class="play-list-wrap">
+                    <span class="play">Playlist:</span>
+                    <ul class="play-list" id="play-list">
+
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <main>
+            <div id="gif" class="gif">
+                <!-- <img src="images/gif6.gif" alt=""> -->
+            </div>
+            <section class="player-wrap">
+                <audio id="player" preload="auto">Audio</audio>
+
+                <div class="controls-wrap">
+
+                    <div class="music-info">
+
+                        <div class="loading-wrap">
+                            <span id="loading-music" class="loading"> Now Playing: </span>
+                            <span id="slide">
+                                <marquee behavior="scroll" direction="left" scrollamount="20"><label id="music-name"> --
+                                    </label></marquee>
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="timeline-wrap">
+                        <label id="time-count">00:00</label>
+                        <input type="range" class="range opaque" min="0" max="100" id="timeline" value="0" step="any">
+                        <label id="time">00:00</label>
+                    </div>
+
+                    <div class="controlsbtns">
+                        <div class="basic-ctrls">
+                            <button type="button" class="ctrlsbtn" id="prev" title="Previous"><i
+                                    class="fa-solid fa-backward"></i></button>
+                            <button type="button" class="ctrlsbtn" id="btn-play" title="Play"><i
+                                    class="fa-solid fa-play"></i></button>
+                            <button type="button" class="ctrlsbtn" id="btn-pause" title="Pause"><i
+                                    class="fa-solid fa-stop"></i></button>
+                            <button type="button" class="ctrlsbtn" id="next" title="Forward"><i
+                                    class="fa-solid fa-forward"></i></button>
+                        </div>
+                        <div class="advance-ctrls">
+                            <button type="button" class="ctrlsbtn" id="repeat" title="Loop"><i
+                                    class="fa-solid fa-repeat"></i></button>
+                            <button type="button" class="ctrlsbtn" id="random" title="Shuffle"><i
+                                    class="fa-solid fa-shuffle"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="volume-wrap">
+                        <button type="button" class="ctrlsbtn" title="Adjust Volume"><i
+                                class="fa-solid fa-volume-low"></i></button>
+                        <span class="volume-box">
+                            <input type="range" class="range" min="0" max="10" id="volume" value="10">
+                        </span>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <div class="copyright">
+                <span id="copyright">&#169; Hrushikesh Karanth</span>
+            </div>
+        </main>
+
+    </div>
+
+    <script type="text/javascript" src="js/player.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>
